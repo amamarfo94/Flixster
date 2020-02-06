@@ -1,21 +1,13 @@
 package com.example.flixster;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.util.Log;
 
-//import com.bumptech.glide.load.model.Headers;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
+
 import okhttp3.Headers;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,16 +20,16 @@ public class MainActivity extends AppCompatActivity {
         AsyncHttpClient client = new AsyncHttpClient();
 
         client.get(NOW_PLAYING_URL, new JsonHttpResponseHandler() {
-
             @Override
-            public void onSuccess(int statusCode, Headers headers, JSON json){
+            public void onSuccess(int i, Headers headers, JSON json) {
+
             }
 
             @Override
             public void onFailure(int i, Headers headers, String s, Throwable throwable) {
 
             }
-        })
+        });
 
 
     }
